@@ -27,8 +27,8 @@ console.log(testGreeting); // printing the output value of the function.
  * These two variables will be used to invoke the functions #2 - #5.
 */ 
 
-var num1 = "bango1"
-var num2 = "bango2"
+var bango1 = 11;
+var bango2 = 13;
 
 /*
  * #2
@@ -44,11 +44,12 @@ var num2 = "bango2"
  * Invoke the function and assign it to a variable named `sum`.
  * Console.log `sum` to test your code.
 */
-function add(){
-    
-}
-add()
 
+function add(num1, num2){
+    return num1 + num2;
+}
+var sum = add(bango1, bango2)
+console.log(sum);
 /*
  * #3
  * Function - subtract
@@ -63,7 +64,11 @@ add()
  * Console.log `difference` to test your code.
 */ 
 
-
+function subtract(num1, num2){
+    return num2 - num1;
+}
+var difference = subtract(bango1, bango2)
+console.log(difference);
 
 /*
  * #4
@@ -79,7 +84,11 @@ add()
  * Console.log `product` to test your code.
 */
 
-
+function multiply(num1, num2){
+    return num1 * num2;
+}
+var product = multiply(bango1, bango2)
+console.log(product);
 
 /*
  * #5
@@ -95,7 +104,11 @@ add()
  * Console.log `quotient` to test your code.
 */
 
-
+function divide(num1, num2){
+    return num2/num1;
+}
+var quotient = divide(bango1, bango2)
+console.log(quotient);
 
 /*
  * #6
@@ -109,7 +122,11 @@ add()
  * Console.log your result.
 */
 
-
+function checkSum(x){
+    return "There are " + x + " states in the United States."
+}
+checkSum(sum)
+console.log(checkSum(sum));
 
 /*
  * #7
@@ -123,7 +140,11 @@ add()
  * Console.log your results.
 */ 
 
-
+function checkDifference(x){
+    return "Last night I dreamt that I ate " + x + " Taco Bell soft tacos."
+}
+checkDifference(difference)
+console.log(checkDifference(difference));
 
 /*
  * #8
@@ -136,7 +157,11 @@ add()
  * Console.log your result.  
 */
 
-
+function checkProduct(){
+    return sum + product;
+}
+checkProduct()
+console.log(checkProduct());
 
 /*
  * #9
@@ -149,7 +174,11 @@ add()
  * Console.log your result.  
 */
 
-
+function checkQuotient(){
+    return product/quotient;
+}
+checkQuotient()
+console.log(checkQuotient());
 
 /*
  * #10
@@ -171,7 +200,18 @@ add()
  * Console.log your result.
 */ 
 
+var bango3 = 5;
+var bango4 = 10;
+var bango5 = 15;
 
+function addThenSubtract(num1, num2, num3){
+   var total = add(num1, num2)
+   var sub = subtract(total, num3)
+   //console.log('total', total);
+   return sub;
+}
+
+console.log(addThenSubtract(bango3, bango4, bango5));
 
 /*
  * #11
@@ -187,7 +227,12 @@ add()
  * Console.log your result.
 */ 
 
-
+function multiplyThenDivide(num1, num2, num3){
+    var total = multiply(num1, num2)
+    var answer = divide(total, num3)
+    return answer;
+}
+console.log(multiplyThenDivide(bango3, bango4, bango5));
 
 /*
  * #12
@@ -201,7 +246,11 @@ add()
  *  This function `returns` back a string which represents someone's full name. Invoke this function by passing in your first  and last name into the function. Store the return value into a variable named `myFullName` and console.log this variable to show your result.
 */
 
-
+function createFullName(firstName, lastName){
+    var myFullName = firstName + " " + lastName
+    return myFullName;
+}
+console.log(createFullName("Elijah", "Richards"))
 
 /*
  * #13 
@@ -218,6 +267,10 @@ add()
  */
 
 
+ function eatFood(firstName, lastName, food){
+    return createFullName(firstName, lastName) + " eats " + food + " everyday for breakfast.";
+ }
+console.log(eatFood("Elijah", "Richards", "Chicken"));
 
 /************** ENGAGE HYPERDRIVE **************/
 /* No more training wheels! For the exercises #14-18, use the experience you've
@@ -232,7 +285,10 @@ add()
  * Console.log your result. 
 */
 
-
+function shoeSize(inches){
+    return inches * 2.54
+}
+console.log(shoeSize(11));
 
 /*
  * #15
@@ -243,8 +299,13 @@ add()
  * Example input: "believe you can and you're halfway there."
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
- 
+var myString = "haha your mom has the big gay.";
 
+function allCaps(str){
+    var upperCase = str.toUpperCase();
+    return upperCase;
+}
+console.log(allCaps(myString));
 
 /*
  * #16
@@ -254,7 +315,11 @@ add()
  * Console.log your result.
 */
 
-
+function oneCap(str){
+    var oneUpperCase = str.charAt(0).toUpperCase() + str.slice(1);
+    return oneUpperCase;
+}
+console.log(oneCap(myString));
 
 /*
  * #17
@@ -267,6 +332,10 @@ add()
  * Store the return value to a variable named `canDrive`. Console.log your result.
  */
 
+function verifyDrivingAgea(age){
+    
+}
+console.log("#17", verifyDrivingAgea());
 
 /**
  * #18
@@ -274,8 +343,7 @@ add()
  * Create a function named roadTrip. This function will check the value stored in the `roadTrip` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We goin on a Road Trip!" If false, then it will return the message "Meh, I guess I'll just stay home." Store the return value to a variable named `canDrive`. Console.log your result.
  */
 
+function roadTrip(){
 
-
-
-
-
+}
+console.log(roadTrip());
